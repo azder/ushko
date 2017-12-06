@@ -6,14 +6,14 @@ void ReduceToUnit(float vector[3])
     float length;
 
     // Calculate the length of the vector
-    length = (float)sqrt((vector[0]*vector[0]) +
-                          (vector[1]*vector[1]) +
-                          (vector[2]*vector[2]));
+    length = (float) sqrt((vector[0] * vector[0]) +
+                          (vector[1] * vector[1]) +
+                          (vector[2] * vector[2]));
 
     // Keep the program from blowing up by providing an acceptable
     // value for vectors whose length may be calculated too close to zero.
-    if(length == 0.0f)
-    length = 1.0f;
+    if (length == 0.0f)
+        length = 1.0f;
 
     // Dividing each element by the length will result in a
     // unit normal vector.
@@ -25,7 +25,7 @@ void ReduceToUnit(float vector[3])
 // Points p1, p2, & p3 specified in counterclockwise order
 void calcNormal(float v[3][3], float out[3])
 {
-    float v1[3],v2[3];
+    float v1[3], v2[3];
     static const int x = 0;
     static const int y = 1;
     static const int z = 2;
@@ -40,9 +40,9 @@ void calcNormal(float v[3][3], float out[3])
 
     // Take the cross product of the two vectors to get
     // the normal vector which will be stored in out[]
-    out[x] = v1[y]*v2[z] - v1[z]*v2[y];
-    out[y] = v1[z]*v2[x] - v1[x]*v2[z];
-    out[z] = v1[x]*v2[y] - v1[y]*v2[x];
+    out[x] = v1[y] * v2[z] - v1[z] * v2[y];
+    out[y] = v1[z] * v2[x] - v1[x] * v2[z];
+    out[z] = v1[x] * v2[y] - v1[y] * v2[x];
 
     // Normalize the vector (shorten length to one)
     ReduceToUnit(out);
@@ -60,19 +60,19 @@ void MakeShadowMatrix(GLfloat points[3][3], GLfloat lightPos[4],
     // Find the plane equation coefficients
     // Find the first three coefficients the same way we
     // find a normal.
-    calcNormal(points,planeCoeff);
+    calcNormal(points, planeCoeff);
 
     // Find the last coefficient by back substitutions
-    planeCoeff[3] = - (
-                        (planeCoeff[0]*points[2][0]) +
-                        (planeCoeff[1]*points[2][1]) +
-                        (planeCoeff[2]*points[2][2]));
+    planeCoeff[3] = -(
+            (planeCoeff[0] * points[2][0]) +
+            (planeCoeff[1] * points[2][1]) +
+            (planeCoeff[2] * points[2][2]));
 
     // Dot product of plane and light position
     dot = planeCoeff[0] * lightPos[0] +
-                        planeCoeff[1] * lightPos[1] +
-                        planeCoeff[2] * lightPos[2] +
-                        planeCoeff[3] * lightPos[3];
+          planeCoeff[1] * lightPos[1] +
+          planeCoeff[2] * lightPos[2] +
+          planeCoeff[3] * lightPos[3];
 
     // Now do the projection
     // First column

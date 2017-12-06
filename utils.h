@@ -2,7 +2,8 @@
 #include <stdlib.h>     // Header file for malloc/free.
 
 /* Image type - contains height, width, and data */
-struct Image {
+struct Image
+{
     unsigned long sizeX;
     unsigned long sizeY;
     char *data;
