@@ -1,0 +1,1 @@
+CMakeLists.txt not found in /Users/azder/workspaces/past/mechka-v-2007-06-04-01
