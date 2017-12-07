@@ -3,16 +3,17 @@
 	Mecheto Ushko
 */
 
-#include <GL/glut.h>
-#include <math.h>
+#include "glut.h"
+
 #include <stdio.h>
 #include <stdlib.h>
+#include <zconf.h>
 #include "utils.c"
 #include "shadow.c"
 #include "meche2.c"
 #include "pick.c"
 
-int gPolyMode = GL_FILL;
+GLenum gPolyMode = GL_FILL;
 int gCamera = 1;
 int gDrawLight = 1;
 
@@ -25,9 +26,9 @@ GLfloat gMovX = 0.0;
 GLfloat gMovY = 0.0;
 GLfloat gMovZ = 0.0;
 
-GLint gRotX = 0.0;
-GLint gRotY = -5.0;
-GLint gRotZ = 0.0;
+GLint gRotX = 0;
+GLint gRotY = -5;
+GLint gRotZ = 0;
 
 GLfloat gLX = 0.0;
 GLfloat gLY = 3.0;
@@ -195,7 +196,7 @@ void setTextures(void)
 	mu ja menuva polozhbata
 */
 
-GLfloat *setLightPos(void)
+void setLightPos(void)
 {
 
     float x = gLX;
@@ -289,8 +290,8 @@ void drawMX(int n)
     glTranslatef(-n / 2, 0, -n / 2);
     glBegin(GL_QUADS);
     glNormal3f(0, 1, 0);
-    float i = 0;
-    float j = 0;
+    int i = 0;
+    int j = 0;
     for (i = 0; i < n; i++)
     {
         for (j = 0; j < n; j++)
@@ -504,8 +505,8 @@ void drawSC(void)
 
     /* iscrtaj ja pozadinata */
     glPushMatrix();
-    glTranslatef(0.0, 6.0, -2.0);
-    glScalef(1.0, -1.0, 1.0);
+    glTranslatef(0.0, 6.0, -2.0f);
+    glScalef(1.0, -1.0f, 1.0);
     glRotatef(90.0, 1.0, 0.0, 0.0);
     glBindTexture(GL_TEXTURE_2D, gTexBack1);
     setMat(0.0000f, 0.5, 0.55, 0.5, 0.0, 0.0, 0.0);
@@ -532,9 +533,9 @@ void drawSC(void)
         treba da bide iscrtana
     */
     GLfloat points[3][3] = {
-            {-10.0, 0.21, -10.0},
-            {-10.0, 0.21, +10.0},
-            {+10.0, 0.21, +10.0}
+            {-10.0f, 0.21f, -10.0f},
+            {-10.0f, 0.21f, +10.0f},
+            {+10.0f, 0.21f, +10.0f}
     }; /* points */
 
     /* matricata na transformacija za senkata */
@@ -772,7 +773,7 @@ void onKeyboard(unsigned char key, int x, int y)
             break; /* case ENTER */
 
         default:
-            printf("key=%d ('%c'), x=%d, y=%d \n", key, x, y);
+            printf("key=%d ('%c'), x=%d, y=%d \n", key, key, x, y);
 
     } /* kraj na switch */
 
@@ -826,6 +827,10 @@ void onReshape(int w, int h)
 int main(int argc, char **argv)
 {
 
+    char cwd[4096];
+    getcwd(cwd, sizeof(cwd));
+    printf("Current working dir: %s\n", cwd);
+
     /*
         inicijaliziraj go openGL,
         namesti dvoen bafer i rezhim na boja,
@@ -842,8 +847,9 @@ int main(int argc, char **argv)
         za da se iskluchi prozorecot so klikanje na X
         ako pravi problemi zameni ja so slednata funkcija
     */
-    __glutCreateWindowWithExit("Moeto Meche - Mecheto Ushko", exit);
-    /*glutCreateWindow("Moeto Meche - Mecheto Ushko");*/
+
+//    __glutCreateWindowWithExit("Moeto Meche - Mecheto Ushko", exit);
+    glutCreateWindow("Moeto Meche - Mecheto Ushko");
 
     /* inicijaliziraj gi potrebnite raboti */
     setInit();

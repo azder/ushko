@@ -1,10 +1,11 @@
+#include "glut.h"
+
 // Converted by the PolyTrans geometry converter from Okino Computer Graphics, Inc.
 // Date/time of export: 04/29/2007 12:26:48
 //
 // Bounding box of geometry = (-4.34328,-1.94083,-6.27578) to (3.5923,2.23791,-3.01698).
 
-void
-glava02()
+void glava02()
 {
     static GLfloat VertexData[] = {
             -1.94107f, 0.821799f, -0.281138f, -1.94107f, 0.821799f, -0.281138f, -1.94107f, 0.821799f, -0.281138f,
@@ -212,8 +213,7 @@ glava02()
 
 // Polygons for object 'nogaDoluDesno#2' (510 polygons)
 
-void
-nogaDoluDesno02()
+void nogaDoluDesno02()
 {
     static GLfloat VertexData[] = {
             0.253274f, 0.322008f, -0.362868f, 0.253274f, 0.322008f, -0.362868f, 0.253928f, 0.326838f, -0.305146f,
@@ -890,8 +890,7 @@ nogaDoluDesno02()
 
 // Polygons for object 'nogaDoluLevo#2' (510 polygons)
 
-void
-nogaDoluLevo02()
+void nogaDoluLevo02()
 {
     static GLfloat VertexData[] = {
             0.872819f, 0.895105f, 0.326557f, 0.872819f, 0.895105f, 0.326557f, 0.872819f, 0.895105f, 0.326557f,
@@ -1551,8 +1550,7 @@ nogaDoluLevo02()
 
 // Polygons for object 'nogaGoreDesno#2' (510 polygons)
 
-void
-nogaGoreDesno02()
+void nogaGoreDesno02()
 {
     static GLfloat VertexData[] = {
             -0.750765f, 0.501403f, -0.473651f, -0.750765f, 0.501403f, -0.473651f, -0.750112f, 0.506233f, -0.415929f,
@@ -2228,8 +2226,7 @@ nogaGoreDesno02()
 
 // Polygons for object 'nogaGoreLevo#2' (510 polygons)
 
-void
-nogaGoreLevo02()
+void nogaGoreLevo02()
 {
     static GLfloat VertexData[] = {
             -0.688433f, 1.14951f, 0.160247f, -0.688433f, 1.14951f, 0.160247f, -0.688433f, 1.14951f, 0.160247f,
@@ -2906,8 +2903,7 @@ nogaGoreLevo02()
 
 // Polygons for object 'nos#2' (280 polygons)
 
-void
-nos02()
+void nos02()
 {
     static GLfloat VertexData[] = {
             -2.00000f, 0.796373f, -0.274789f, -1.99924f, 0.760850f, -0.255465f, -1.99704f, 0.765019f, -0.284577f,
@@ -3207,8 +3203,7 @@ nos02()
 
 // Polygons for object 'okoDesno#2' (280 polygons)
 
-void
-okoDesno02()
+void okoDesno02()
 {
     static GLfloat VertexData[] = {
             -1.75907f, 1.18836f, -0.434933f, -1.75629f, 1.19471f, -0.450593f, -1.75612f, 1.16512f, -0.429132f,
@@ -3500,8 +3495,7 @@ okoDesno02()
 
 // Polygons for object 'okoLevo#2' (280 polygons)
 
-void
-okoLevo02()
+void okoLevo02()
 {
     static GLfloat VertexData[] = {
             -1.78242f, 1.21127f, -0.145285f, -1.77964f, 1.21761f, -0.160945f, -1.77947f, 1.18803f, -0.139485f,
@@ -3796,8 +3790,7 @@ okoLevo02()
 
 // Polygons for object 'stapaloDoluDesno#2' (152 polygons)
 
-void
-stapaloDoluDesno02()
+void stapaloDoluDesno02()
 {
     static GLfloat VertexData[] = {
             0.0583862f, 0.257917f, -0.496215f, 0.0644109f, 0.199352f, -0.472897f, 0.0666302f, 0.244449f, -0.548596f,
@@ -4051,8 +4044,7 @@ stapaloDoluDesno02()
 
 // Polygons for object 'stapaloDoluLevo#2' (152 polygons)
 
-void
-stapaloDoluLevo02()
+void stapaloDoluLevo02()
 {
     static GLfloat VertexData[] = {
             1.37785f, 0.106363f, 0.579638f, 1.37785f, 0.106363f, 0.579638f, 1.37785f, 0.106363f, 0.579638f,
@@ -4378,8 +4370,7 @@ stapaloDoluLevo02()
 
 // Polygons for object 'stapaloGoreDesno#2' (152 polygons)
 
-void
-stapaloGoreDesno02()
+void stapaloGoreDesno02()
 {
     static GLfloat VertexData[] = {
             -1.00116f, 0.441140f, -0.626494f, -0.995665f, 0.431024f, -0.679979f, -0.995665f, 0.431024f, -0.679979f,
@@ -4632,8 +4623,7 @@ stapaloGoreDesno02()
 
 // Polygons for object 'stapaloGoreLevo#2' (152 polygons)
 
-void
-stapaloGoreLevo02()
+void stapaloGoreLevo02()
 {
     static GLfloat VertexData[] = {
             -0.895078f, 0.214187f, 0.297153f, -0.884859f, 0.203264f, 0.246867f, -0.884859f, 0.203264f, 0.246867f,
@@ -4968,8 +4958,7 @@ stapaloGoreLevo02()
 
 // Polygons for object 'torzo#2' (280 polygons)
 
-void
-torzo02()
+void torzo02()
 {
     static GLfloat VertexData[] = {
             -0.888219f, 1.49123f, -0.256568f, -0.872974f, 1.47892f, -0.0957833f, -0.814034f, 1.52381f, -0.484847f,
@@ -5252,8 +5241,7 @@ torzo02()
 
 // Polygons for object 'vrat#2' (222 polygons)
 
-void
-vrat02()
+void vrat02()
 {
     static GLfloat VertexData[] = {
             -1.34297f, 1.53223f, -0.284632f, -1.34297f, 1.53223f, -0.284632f, -1.34297f, 1.53223f, -0.284632f,

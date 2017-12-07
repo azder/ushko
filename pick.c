@@ -1,3 +1,6 @@
+#include "glut.h"
+#include <stdio.h>
+
 #define BUFFER_GOLEMINA                    1024
 
 #define IME_NEMA                                0
@@ -56,7 +59,7 @@ void setPick(int x, int y)
           (zradi glushecot mora visina na viewport minus y)
           i so shirina i visina od 4 edinici
     */
-    gluPickMatrix((GLdouble) x, (GLdouble)(vp[3] - y), 4.0, 4.0, vp);
+    gluPickMatrix((GLdouble) x, (GLdouble) (vp[3] - y), 4.0, 4.0, vp);
 
     /*
         namesti go pogledot na istite vrednosti
@@ -100,7 +103,7 @@ void hits(int hits, GLuint *buffer)
         so najgolemiot nenegativen broj
         '-1' binarno e '11111....1111'
     */
-    GLfloat z = (GLfloat)((GLuint) - 1);
+    GLfloat z = (GLfloat) ((GLuint) -1);
 
     /* odbrano shto momentalno se obrabotuva */
     GLuint o = IME_NEMA;

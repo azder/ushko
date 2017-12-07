@@ -53,7 +53,7 @@ int ImageLoad(char *filename, Image *image)
     image->data = (char *) malloc(size);
     if (image->data == NULL)
     {
-        printf("Error allocating memory for color-corrected image data");
+        printf("Error allocating memory for color-corrected image data\n");
         return 0;
     }
     if ((i = fread(image->data, size, 1, file)) != 1)

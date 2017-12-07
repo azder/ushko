@@ -1,4 +1,7 @@
 
+#include "glut.h"
+#include <math.h>
+
 // Reduces a normal vector specified as a set of three coordinates,
 // to a unit normal vector of length 1.
 void ReduceToUnit(float vector[3])
@@ -6,9 +9,11 @@ void ReduceToUnit(float vector[3])
     float length;
 
     // Calculate the length of the vector
-    length = (float) sqrt((vector[0] * vector[0]) +
-                          (vector[1] * vector[1]) +
-                          (vector[2] * vector[2]));
+    length = sqrtf(
+            (vector[0] * vector[0]) +
+            (vector[1] * vector[1]) +
+            (vector[2] * vector[2])
+    );
 
     // Keep the program from blowing up by providing an acceptable
     // value for vectors whose length may be calculated too close to zero.
