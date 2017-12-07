@@ -4,8 +4,8 @@
 /* Image type - contains height, width, and data */
 struct Image
 {
-    unsigned long sizeX;
-    unsigned long sizeY;
+    GLsizei sizeX;
+    GLsizei sizeY;
     char *data;
 };
 typedef struct Image Image;
